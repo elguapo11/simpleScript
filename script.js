@@ -15,12 +15,12 @@ function generateItemObject(count) {
   for (let i = 0; i < count; i++) {
     items.push(generateRandomItem());
   }
-  return `{ ${items.join(', ')} }`; // Return as a single object string
+  return `{ \n  ${items.join(',\n  ')} \n}`; // Return as a single object string with indentation
 }
 
 // Generate a list of 1000 items (you can change the count as desired)
 const itemCount = 1000;
 const itemObjectString = generateItemObject(itemCount);
 
-// Output the generated object string to the console
+// Output the generated object string to the console with formatting
 console.log(itemObjectString);
