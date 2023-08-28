@@ -5,6 +5,7 @@ const possibleValues = ['"hidden"', '"visible"', '"replace"', '"autoreplace"'];
 function generateRandomItem(key, maxValue) {
   if (key > maxValue) {
     return null;
+    //The maxValue is important because if key is less than maxValue, then you won't get anything back, key has to be bigger for it to loop.
   }
   const value =
     possibleValues[Math.floor(Math.random() * possibleValues.length)]; // Select a random value with double quotes
